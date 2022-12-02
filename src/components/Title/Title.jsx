@@ -4,9 +4,8 @@ import './Title.css';
 function Title() {
   return (
     <div className='Title'>
-        <h1>Катя какашка</h1>
-       
-            <h2>San Franciscos Privately Owned Public Spaces</h2>
+        <h1>GROW</h1>
+        <h2>Check result of your grow up everyday</h2>
     </div>
   )
 }

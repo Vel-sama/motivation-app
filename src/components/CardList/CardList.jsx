@@ -7,12 +7,12 @@ function TypeCard() {
         <CardSpace
           name="Money"
           result="3*"
-          image="50-california-st.jpg"
+          image="tree-image-isolated-white-background-jpg-111991201.jpg"
         />
         <CardSpace
           name="Health"
           result="4*"
-          image="50-california-st.jpg"
+          image="tree-image-isolated-white-background-jpg-111991201.jpg"
         />
         <CardSpace
           name="Family"

@@ -1,42 +1,28 @@
 import React from 'react';
-import './CardList.css'
+import './CardList.css';
 import CardSpace from '../CardSpace/CardSpace';
+import data from '../../data.json';
 
-function TypeCard() {
+function CardList() {
+
+  const spaces = data.map(({title, address, images, hours}) => {
+
+    return (
+      <CardSpace
+        key = {title}
+        name={title}
+        address={address}
+        image={images[0]}
+        hours = {`${new Date().getDay()} day of a week`}
+      />
+    )
+  })
+
   return (
-    <div className='CardList'>
-        <CardSpace
-          name="Money"
-          result="3*"
-          image="tree-image-isolated-white-background-jpg-111991201.jpg"
-        />
-        <CardSpace
-          name="Health"
-          result="4*"
-          image="tree-image-isolated-white-background-jpg-111991201.jpg"
-        />
-        <CardSpace
-          name="Family"
-          result="5*"
-          image="tree-image-isolated-white-background-jpg-111991201.jpg"
-          />
-        <CardSpace
-          name="Family"
-          result="5*"
-          image="tree-image-isolated-white-background-jpg-111991201.jpg"
-          />
-        <CardSpace
-          name="Family"
-          result="5*"
-          image="tree-image-isolated-white-background-jpg-111991201.jpg"
-          />
-        <CardSpace
-          name="Family"
-          result="5*"
-          image="tree-image-isolated-white-background-jpg-111991201.jpg"
-          />
+    <div className="CardList">
+      { spaces }
     </div>
   )
 }
 
-export default TypeCard
+export default CardList

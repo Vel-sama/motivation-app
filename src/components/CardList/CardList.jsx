@@ -1,9 +1,10 @@
 import React from 'react';
+import './CardList.css'
 import CardSpace from '../CardSpace/CardSpace';
 
 function TypeCard() {
   return (
-    <div>
+    <div className='CardList'>
         <CardSpace
           name="Money"
           result="3*"
@@ -17,7 +18,22 @@ function TypeCard() {
         <CardSpace
           name="Family"
           result="5*"
-          image="50-california-st.jpg"
+          image="tree-image-isolated-white-background-jpg-111991201.jpg"
+          />
+        <CardSpace
+          name="Family"
+          result="5*"
+          image="tree-image-isolated-white-background-jpg-111991201.jpg"
+          />
+        <CardSpace
+          name="Family"
+          result="5*"
+          image="tree-image-isolated-white-background-jpg-111991201.jpg"
+          />
+        <CardSpace
+          name="Family"
+          result="5*"
+          image="tree-image-isolated-white-background-jpg-111991201.jpg"
           />
     </div>
   )

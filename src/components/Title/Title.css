@@ -1,14 +1,13 @@
 .Title {
     box-sizing: border-box;
     width: 100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: baseline; */
     padding: 1em;
     margin-bottom: 2em;
     background-color: rgb(232 234 240);
     color: #14b8b9;
+    text-align: center;
 }
 .Title-Subtitle {
     color: rgba(255, 255, 255, 0.75);
+    text-align: center;
 }

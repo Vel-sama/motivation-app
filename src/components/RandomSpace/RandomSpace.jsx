@@ -1,15 +1,16 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
-import '../RandomSpace/RandomSpace.css'
+import './RandomSpace.css'
 import data from '../../data.json'
+import { Button } from '@nextui-org/react'
 
 function RandomSpace() {
     const history = useNavigate();
     return (
-        <button  className="nav-link" onClick={(e) => {
+        <Button  className="show-random-button" onClick={(e) => {
             const id = Math.floor(Math.random() * data.length);
             history(`/details/${id}`)
-        }}> Show a random </button>
+        }}> Show a random </Button>
     )
 }
 

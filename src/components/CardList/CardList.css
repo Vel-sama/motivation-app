@@ -19,7 +19,7 @@
   }
 }
 
-.CardList form {
+/* .CardList form {
   display: flex;
   align-items: flex-start;
 }
@@ -29,9 +29,9 @@
   margin: 0;
   border: 1px solid;
   font-size: 1;
-}
+} */
 
-.CardList form input {
+/* .CardList form input {
   flex: 1;
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
@@ -40,4 +40,4 @@
 .CardList form button {
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-}
+} */

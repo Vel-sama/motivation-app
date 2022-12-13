@@ -6,9 +6,11 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer'
 import CardDetails from './components/CardDetails/CardDetails';
+import { NextUIProvider } from '@nextui-org/react';
 
 function App() {
   return (
+    <NextUIProvider>
     <Router>
       <div className="App">
         <Title />
@@ -20,6 +22,7 @@ function App() {
         <Footer/>
       </div>
     </Router>
+    </NextUIProvider>
   );
 }
 

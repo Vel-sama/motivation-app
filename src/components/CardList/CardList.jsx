@@ -2,9 +2,11 @@ import React, { useState }from 'react';
 import './CardList.css';
 import CardSpace from '../CardSpace/CardSpace';
 import data from '../../data.js';
+import { Input } from '@nextui-org/react';
 
 function CardList() {
   const [ query, setQuery ] = useState('')
+
   const spaces = data.filter((obj) => {
     const inTitle = obj.title.toLowerCase().includes(query.toLowerCase());
     const inAddress = obj.address.toLowerCase().includes(query.toLowerCase());
@@ -26,12 +28,13 @@ function CardList() {
   return (
     <div className="CardList">
       <form>
-        <input 
+      <Input placeholder="Next UI"
+       underlined   
+          size='xs'
           value={query}
-          placeholder="seacrh"
           onChange={(e) => setQuery(e.target.value)}
-        />
-        <button type="submit">Submit</button>
+          />
+        {/* <button type="submit">Submit</button> */}
       </form>
       { spaces }
     </div>

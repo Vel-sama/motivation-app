@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { useState }from 'react';
 import './CardList.css';
 import CardSpace from '../CardSpace/CardSpace';
-import data from '../../data.json';
+import data from '../../data.js';
 
 function CardList() {
-
-  const spaces = data.map(({title, address, images, hours}) => {
+  const [ query, setQuery ] = useState('')
+  const spaces = data.filter((obj) => {
+    const inTitle = obj.title.toLowerCase().includes(query.toLowerCase());
+    const inAddress = obj.address.toLowerCase().includes(query.toLowerCase());
+    return inTitle || inAddress
+  }).map(({title, address, images, hours, id}) => {
 
     return (
       <CardSpace
-        key = {title}
+        id = {id}
+        key = {`${title}-${id}`}
         name={title}
         address={address}
         image={images[0]}
-        hours = {`${new Date().getDay()} day of a week`}
+        hours = {hours}
       />
     )
   })
 
   return (
     <div className="CardList">
+      <form>
+        <input 
+          value={query}
+          placeholder="seacrh"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
       { spaces }
     </div>
   )

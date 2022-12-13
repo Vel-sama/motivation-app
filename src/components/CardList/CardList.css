@@ -1,7 +1,43 @@
 .CardList {
-    width: calc(100% - 80px);
+    max-width: 1200px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 2em;
+    padding: 2em;
   }
+
+@media (max-width: 960px) {
+    .CardList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+  .CardList {
+      grid-template-columns: 1fr;
+  }
+}
+
+.CardList form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.CardList form input, .CardList form button {
+  padding: 0.5em;
+  margin: 0;
+  border: 1px solid;
+  font-size: 1;
+}
+
+.CardList form input {
+  flex: 1;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.CardList form button {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}

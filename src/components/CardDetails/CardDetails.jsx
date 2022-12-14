@@ -16,7 +16,6 @@ function CardDetails(props) {
             <h1 className='CardDetails-title'>{ title }</h1>
             <p className='CardDetails-desc'>{ desc }</p>
             <p className='CardDetails-hours'>Please call: { hours }</p>
-            {/* <p className='CardDetails-features'>{ features }</p> */}
             <p className='CardDetails-infgeoo'> Geo:{ geo.lat } { geo.lon }</p>
         </div>
     </div>

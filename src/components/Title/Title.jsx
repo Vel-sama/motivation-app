@@ -1,10 +1,12 @@
-import React from 'react';
+import  { React, useState } from 'react';
 import './Title.css';
 import { NavLink } from 'react-router-dom';
 import RandomSpace from '../RandomSpace/RandomSpace';
-import { Link, Text } from '@nextui-org/react'
+import { Text, Input } from '@nextui-org/react'
+
 
 function Title() {
+  const [ query, setQuery ] = useState('')
   return (
     <div className='Title'>
       <header>
@@ -22,23 +24,34 @@ function Title() {
       h3
       size={30}
       css={{
-        textGradient: "60deg, $red600 -20%, $black600 50%",
+        textGradient: "60deg, $red600 -20%, $yellow600 50%",
+        
       }}
       >
       You can dream, choose one
       </Text>
         
       <div className='group-of-navigation'>
-      <Link
-  className="nav-link"
-  exact = "true"
-  href="/">Main</Link>
+        <NavLink
+          className="nav-link"
+          exact = "true"
+          to="/">Main
+        </NavLink>
 
-<NavLink
-  className="nav-link"
-  to="/about">About</NavLink>
-  <RandomSpace />
+        <NavLink
+          className="nav-link"
+          to="/about">About
+        </NavLink>
+        <RandomSpace />
       </div>
+      <form>
+      <Input placeholder="Next UI"
+      underlined   
+          size='xs'
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          />
+      </form>
       </header>
     </div>
   )

@@ -2,8 +2,9 @@
     box-sizing: border-box;
     width: 100%;
     padding: 1em;
-    margin-top: 2em;
+    margin: 20px 0 0;
     background-color: rgb(232 234 240);
     color: #14b8b9;
     text-align: end;
+    
 }
